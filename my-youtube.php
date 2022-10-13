@@ -15,13 +15,51 @@
  * Domain Path:       /languages
  */
 
- add_filter( 'the_content', 'thanks' );
+if ( ! defined( 'WPINC' ) ) {
+   wp_die();
+}
 
- function thanks( $content ){
+// Versão do plugin
+if ( ! defined( 'MY_YOUTUBE_VERSION' ) ) {
+   define( 'MY_YOUTUBE_VERSION', '1.0.0' );
+}
 
-    return $content . '<p><strong>Muito obrigado!!!</strong></p>';
- }
+// Nome do plugin
+if ( ! defined( 'MY_YOUTUBE_NAME' ) ) {
+   define( 'MY_YOUTUBE_NAME', 'My Youtube' );
+}
 
- /**
-  * Continuar aula de plugin da host gator!!!
-  */
+// Apelido do plugin
+if ( ! defined( 'MY_YOUTUBE_SLUG' ) ) {
+   define( 'MY_YOUTUBE_SLUG', 'my-youtube' );
+}
+
+// Nome base do plugin
+if ( ! defined( 'MY_YOUTUBE_BASENAME' ) ) {
+   define( 'MY_YOUTUBE_BASENAME', plugin_basename( __FILE__ ) );
+}
+
+// Pasta base do plugin
+if ( ! defined( 'MY_YOUTUBE_PLUGIN_DIR' ) ) {
+   define( 'MY_YOUTUBE_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+}
+
+// Nome do arquivo JSON
+if ( ! defined( 'MY_YOUTUBE_JSON_FILENAME' ) ) {
+   define( 'MY_YOUTUBE_JSON_FILENAME', 'my-youtube.json' );
+}
+
+require_once MY_YOUTUBE_PLUGIN_DIR . 'includes/class-my-youtube.php';
+require_once MY_YOUTUBE_PLUGIN_DIR . 'includes/class-my-youtube-json.php';
+require_once MY_YOUTUBE_PLUGIN_DIR . 'includes/class-my-youtube-shortcode.php';
+require_once MY_YOUTUBE_PLUGIN_DIR . 'includes/class-my-youtube-widget.php';
+
+if ( is_admin() ) {
+   require_once MY_YOUTUBE_PLUGIN_DIR . 'includes/class-my-youtube-admin.php';
+}
+
+$my_youtube = new My_Youtube_Admin(
+   MY_YOUTUBE_BASENAME,
+   MY_YOUTUBE_SLUG,
+   MY_YOUTUBE_JSON_FILENAME
+);

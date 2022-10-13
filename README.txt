@@ -1,0 +1,1 @@
+** Estudo de como criar um plugin para o wordpress

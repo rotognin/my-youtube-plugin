@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       My Youtube
- * Plugin URI:        https://example.com/plugins/the-basics/
+ * Plugin URI:        https://github.com/rotognin/my-youtube-plugin
  * Description:       Plugin para buscar informações do Youtube
  * Version:           1.0.0
  * Requires at least: 5.2

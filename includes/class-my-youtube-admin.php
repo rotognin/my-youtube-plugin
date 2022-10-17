@@ -132,8 +132,8 @@ if ( ! class_exists( 'My_Youtube_Admin' ) ) {
         public function channel_id_callback () {
             $value = isset($this->options['channel_id']) ? esc_attr( $this->options['channel_id'] ) : '';
             ?>
-            <input type="text" id="channel_id" name="my_yt[channel_id]" value="<?php echo $value; ?>" class="regular-text" />
-                <p class="description"><?php echo __('sample' , 'my-youtube'); ?>: UCFuIUoyHB12qpYa8Jpxoxow</p>
+            <input type="text" id="channel_id" name="my_youtube_op[channel_id]" value="<?php echo $value; ?>" class="regular-text" />
+                <p class="description"><?php echo __('sample' , 'my-youtube'); ?>: UCcJAE190tfX3-HepxA6IcYw</p>
                 <p class="description"><a href="https://support.google.com/youtube/answer/3250431" target="_blank"><?php echo __('Find here your channel Id' , 'my-youtube'); ?></a></p>
             <?php
         }
@@ -144,7 +144,7 @@ if ( ! class_exists( 'My_Youtube_Admin' ) ) {
 
             $value = isset( $this->options['cache_expiration'] ) ? esc_attr( $this->options['cache_expiration'] ) : '1';
             ?>
-                <input type="number" id="cache_expiration" min="1" name="my_yt[cache_expiration]" value="<?php echo $value; ?>" class="small-text" />
+                <input type="number" id="cache_expiration" min="1" name="my_youtube_op[cache_expiration]" value="<?php echo $value; ?>" class="small-text" />
                 <?php echo __('hours is the expiration time for cached data' , 'my-youtube'); ?>.
                 <p class="description"><a href="<?php echo $json_url?>" target="_blank"><?php echo __('Test here' , 'my-youtube'); ?></a>.
             <?php
@@ -155,9 +155,9 @@ if ( ! class_exists( 'My_Youtube_Admin' ) ) {
             ?>
             <fieldset>
                 <legend class="screen-reader-text"><span><?php echo __('On posts show videos in position:' , 'my-youtube') ?></span></legend>
-                <label><input type="radio" name="my_yt[show_position]" value=""<?php echo ( $value == '' ) ? 'checked="checked"' : ''; ?>> <?php echo __('Disable' , 'my-youtube'); ?></label><br>
-                <label><input type="radio" name="my_yt[show_position]" value="after"<?php echo ( $value == 'after' ) ? 'checked="checked"' : ''; ?>> <?php echo __('After' , 'my-youtube'); ?></label><br>
-                <label><input type="radio" name="my_yt[show_position]" value="before"<?php echo ( $value == 'before' ) ? 'checked="checked"' : ''; ?>> <?php echo __('Before' , 'my-youtube'); ?></label>
+                <label><input type="radio" name="my_youtube_op[show_position]" value=""<?php echo ( $value == '' ) ? 'checked="checked"' : ''; ?>> <?php echo __('Disable' , 'my-youtube'); ?></label><br>
+                <label><input type="radio" name="my_youtube_op[show_position]" value="after"<?php echo ( $value == 'after' ) ? 'checked="checked"' : ''; ?>> <?php echo __('After' , 'my-youtube'); ?></label><br>
+                <label><input type="radio" name="my_youtube_op[show_position]" value="before"<?php echo ( $value == 'before' ) ? 'checked="checked"' : ''; ?>> <?php echo __('Before' , 'my-youtube'); ?></label>
             </fieldset>
             <?php
         }
@@ -165,7 +165,7 @@ if ( ! class_exists( 'My_Youtube_Admin' ) ) {
         public function show_layout_callback() {
             $value = isset( $this->options['layout'] ) ? esc_attr( $this->options['layout'] ) : 'grid';
             ?>
-            <select name="my_yt[layout]">
+            <select name="my_youtube_op[layout]">
                 <option value="grid"<?php echo ( $value == 'grid' ) ? 'selected="selected"' : '' ?>><?php echo __('Grid' , 'my-youtube'); ?></option>
                 <option value="list"<?php echo ( $value == 'list' ) ? 'selected="selected"' : '' ?>><?php echo __('List' , 'my-youtube'); ?></option>
             </select>
@@ -175,7 +175,7 @@ if ( ! class_exists( 'My_Youtube_Admin' ) ) {
         public function limit_callback() {
             $value = isset( $this->options['limit'] ) ? esc_attr( $this->options['limit'] ) : '3';
             ?>
-            <input type="number" id="limit" min="1" max="15" name="my_yt[limit]" value="<?php echo $value; ?>" class="small-text" />
+            <input type="number" id="limit" min="1" max="15" name="my_youtube_op[limit]" value="<?php echo $value; ?>" class="small-text" />
             <p class="description"><?php echo __('Max' , 'my-youtube'); ?> 15</p>
             <?php
         }
@@ -183,7 +183,7 @@ if ( ! class_exists( 'My_Youtube_Admin' ) ) {
         public function custom_css_callback() {
             $value = isset( $this->options['custom_css'] ) ? esc_attr( $this->options['custom_css'] ) : '';
             ?>
-            <textarea id="custom_css" name="my_yt[custom_css]" rows="10" cols="50" class="large-text code"><?php echo $value; ?></textarea>
+            <textarea id="custom_css" name="my_youtube_op[custom_css]" rows="10" cols="50" class="large-text code"><?php echo $value; ?></textarea>
             <?php
         }
 

@@ -23,6 +23,7 @@ if ( ! class_exists( 'My_Youtube' ) ) {
 
         public function add_videos_list_in_single_content( $content ) {
 
+            // Verificar se está dentro de uma publicação
             if ( is_single() ) {
 
                 $position = $this->options['show_position'];
@@ -33,9 +34,9 @@ if ( ! class_exists( 'My_Youtube' ) ) {
                     $content .= $this->build_html_videos_list();
                 }
 
-                return $content;
-
             }
+
+            return $content;
 
         }
 
@@ -77,7 +78,7 @@ if ( ! class_exists( 'My_Youtube' ) ) {
 	        wp_enqueue_style( 'my-youtube-style', plugin_dir_url( __DIR__ ) . 'public/css/style.css' );
         	wp_enqueue_script( 'my-youtube-scripts', plugin_dir_url( __DIR__ ) . 'public/js/scripts.js', array( 'jquery' ), '', false );
         	wp_enqueue_script( 'my-youtube-loader', plugin_dir_url( __DIR__ ) . 'public/js/loader.js', array( 'jquery' ), '', true );
-			wp_localize_script( 'my-youtube-scripts', 'my_yt_rec_ajax', array( 'url' => network_admin_url( 'admin-ajax.php' ) ) );
+			wp_localize_script( 'my-youtube-scripts', 'my_yt_ajax', array( 'url' => network_admin_url( 'admin-ajax.php' ) ) );
 			
 		}
 

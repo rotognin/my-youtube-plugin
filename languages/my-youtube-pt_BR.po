@@ -1,0 +1,136 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2022-10-19 14:43-0300\n"
+"PO-Revision-Date: 2022-10-19 14:52-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/class-my-youtube-admin.php:30
+#: includes/class-my-youtube-admin.php:240
+msgid "Settings"
+msgstr "Configurações"
+
+#: includes/class-my-youtube-admin.php:31
+#: includes/class-my-youtube-admin.php:42
+#: includes/class-my-youtube-admin.php:232
+#: includes/class-my-youtube-widget.php:11
+msgid "My Youtube"
+msgstr "Meu Youtube"
+
+#: includes/class-my-youtube-admin.php:63
+msgid "General Settings"
+msgstr "Configurações Gerais"
+
+#: includes/class-my-youtube-admin.php:70
+msgid "Channel Id"
+msgstr "ID do Canal"
+
+#: includes/class-my-youtube-admin.php:78
+msgid "Cache Expiration"
+msgstr "Expiração do Cache"
+
+#: includes/class-my-youtube-admin.php:86
+msgid "Post Settings"
+msgstr "Configurações de Postagem"
+
+#: includes/class-my-youtube-admin.php:93
+msgid "Show in Posts"
+msgstr "Exibir em Postagens"
+
+#: includes/class-my-youtube-admin.php:101
+#: includes/class-my-youtube-widget.php:43
+msgid "Layout"
+msgstr "Layout"
+
+#: includes/class-my-youtube-admin.php:109
+msgid "Videos in List"
+msgstr "Vídeos na Lista"
+
+#: includes/class-my-youtube-admin.php:117
+msgid "Customize Style"
+msgstr "Personalizar Estilo"
+
+#: includes/class-my-youtube-admin.php:124
+msgid "Your CSS"
+msgstr "Seu CSS"
+
+#: includes/class-my-youtube-admin.php:136
+msgid "sample"
+msgstr "exemplo"
+
+#: includes/class-my-youtube-admin.php:137
+msgid "Find here your channel Id"
+msgstr "Encontre o ID do seu canal aqui"
+
+#: includes/class-my-youtube-admin.php:148
+msgid "hours is the expiration time for cached data"
+msgstr "horas para a expiração dos dados temporários"
+
+#: includes/class-my-youtube-admin.php:149
+msgid "Test here"
+msgstr "Teste aqui"
+
+#: includes/class-my-youtube-admin.php:157
+msgid "On posts show videos in position:"
+msgstr "Em postagens, exibir vídeos na posição:"
+
+#: includes/class-my-youtube-admin.php:158
+msgid "Disable"
+msgstr "Desabilitado"
+
+#: includes/class-my-youtube-admin.php:159
+msgid "After"
+msgstr "Após"
+
+#: includes/class-my-youtube-admin.php:160
+msgid "Before"
+msgstr "Antes"
+
+#: includes/class-my-youtube-admin.php:169
+#: includes/class-my-youtube-widget.php:45
+msgid "Grid"
+msgstr "Grade"
+
+#: includes/class-my-youtube-admin.php:170
+#: includes/class-my-youtube-widget.php:46
+msgid "List"
+msgstr "Lista"
+
+#: includes/class-my-youtube-admin.php:179
+msgid "Max"
+msgstr "Máximo"
+
+#: includes/class-my-youtube-admin.php:191
+msgid "Plugin Version"
+msgstr "Versão do Plugin"
+
+#: includes/class-my-youtube-admin.php:233
+msgid "Fill with your Youtube channel ID"
+msgstr "Preencha com o ID do seu canal do Youtube"
+
+#: includes/class-my-youtube-shortcode.php:26
+#: includes/class-my-youtube-widget.php:86 includes/class-my-youtube.php:61
+msgid "Loading..."
+msgstr "Carregando..."
+
+#: includes/class-my-youtube-widget.php:27
+msgid "Last Videos"
+msgstr "Últimos vídeos"
+
+#: includes/class-my-youtube-widget.php:36
+msgid "Title"
+msgstr "Título"
+
+#: includes/class-my-youtube-widget.php:52
+msgid "Videos to show"
+msgstr "Vídeos para exibir"

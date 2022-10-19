@@ -49,6 +49,13 @@ if ( ! defined( 'MY_YOUTUBE_JSON_FILENAME' ) ) {
    define( 'MY_YOUTUBE_JSON_FILENAME', 'my-youtube.json' );
 }
 
+load_plugin_textdomain(
+   MY_YOUTUBE_SLUG,
+   false,
+   MY_YOUTUBE_SLUG . '/languages/'
+);
+
+
 require_once MY_YOUTUBE_PLUGIN_DIR . 'includes/class-my-youtube.php';
 require_once MY_YOUTUBE_PLUGIN_DIR . 'includes/class-my-youtube-json.php';
 require_once MY_YOUTUBE_PLUGIN_DIR . 'includes/class-my-youtube-shortcode.php';
@@ -64,6 +71,7 @@ $my_yt_plugin = new My_Youtube();
 $channel_id = $my_yt_plugin->options['channel_id'];
 
 if ( $channel_id != "" ){
+
    $expiration = $my_yt_rec_plugin->options['cache_expiration'];
    $my_yt_rec_json = new My_Youtube_Json( 
        $channel_id, 
@@ -71,14 +79,14 @@ if ( $channel_id != "" ){
        MY_YOUTUBE_SLUG, 
        MY_YOUTUBE_JSON_FILENAME 
    );
+
+   // Widget Instance
+   $my_yt_rec_widget = new My_Youtube_Widget();
+
+   // Shortcode Instance
+   $my_yt_rec_shortcode = new My_Youtube_Shortcode();
  
 }
-
-// Widget Instance
-$my_yt_rec_widget = new My_Youtube_Widget();
-
-// Shortcode Instance
-$my_yt_rec_shortcode = new My_Youtube_Shortcode();
 
 if ( is_admin() ) {
    $my_youtube = new My_Youtube_Admin(
